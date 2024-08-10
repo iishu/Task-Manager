@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 import Sidebar from '../components/Home/Sidebar'
 
 const Home = () => {
@@ -7,7 +8,9 @@ const Home = () => {
         <div className=" w-1/5 border border-gray-500 rounded-xl p-4 flex flex-col justify-between ">
           <Sidebar/>
         </div>
-        <div className=" w-5/6 border border-gray-500 rounded-xl p-4">hello2</div>
+        <div className=" w-5/6 border border-gray-500 rounded-xl p-4">
+          <Outlet/>
+        </div>
     </div>
   )
 }
