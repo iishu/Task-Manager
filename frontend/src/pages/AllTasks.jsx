@@ -1,9 +1,11 @@
 import React from 'react'
 import Cards from '../components/Home/Cards'
 import { IoIosAdd } from "react-icons/io";
+import InputData from "../components/Home/InputData";
 const AllTasks = () => {
   
   return (
+   <>
     <div> 
       <div className="w-full flex justify-end px-4 py-2">
         <button> 
@@ -12,6 +14,8 @@ const AllTasks = () => {
         </div>
       <Cards home={"true"}/>
     </div>
+    <InputData />
+    </>
   )
 }
 
