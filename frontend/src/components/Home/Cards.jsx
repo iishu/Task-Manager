@@ -1,15 +1,14 @@
 import React from 'react';
- 
 import { IoHeartOutline } from "react-icons/io5";
 import { FaEdit } from "react-icons/fa";
 import { MdOutlineDeleteOutline } from "react-icons/md";
 import { IoIosAdd } from "react-icons/io";
-import { useState } from 'react';
+ 
 
 
 
 
-const Cards = ({home}) => {
+const Cards = ({home, setInputDiv}) => {
   const data=[
     {
         title: "The best Coding channel",
@@ -32,8 +31,7 @@ const Cards = ({home}) => {
         status:"In Complete",
     },
   ];
-  const [ImportantButton, setImportantButton] = useState("Incomplete")
-  return (
+   return (
     <div className="grid grid-cols-3 gap-4 p-4">
         {data && data.map((items, i) =>(
         <div  className="flex flex-col justify-between bg-gray-700 rounded-sm p-4">
@@ -60,11 +58,11 @@ const Cards = ({home}) => {
         </div>
         ))}
       {home==="true" &&(
-          <div  className="flex flex-col justify-center items-center bg-gray-700 rounded-sm p-4 text-gray-300 hover:scale-105 hover:cursor-pointer transition-all duration-100">
+          <button className="flex flex-col justify-center items-center bg-gray-700 rounded-sm p-4 text-gray-300 hover:scale-105 hover:cursor-pointer transition-all duration-300" onClick={()=>setInputDiv("fixed")}>
           <IoIosAdd className='text-5xl' />
           <h2 className="text-2xl  mt-4">Add Task</h2>
                  
-             </div>
+             </button>
       )}
        
      
